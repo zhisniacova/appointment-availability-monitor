@@ -4,3 +4,7 @@ node_modules/
 nohup.out
 debug-*.png
 .DS_Store
+data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

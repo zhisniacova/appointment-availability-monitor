@@ -1,17 +1,23 @@
 {
   "name": "appointment-availability-monitor",
   "version": "1.0.0",
-  "main": "watch-icbc.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node watch-icbc.js"
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "check": "node --check src/*.js scripts/*.js test/*.js watch-icbc.js",
+    "test": "node --test",
+    "check:once": "node scripts/check-once.js"
   },
-  "keywords": ["playwright", "automation", "telegram", "appointment-monitor"],
+  "keywords": ["playwright", "automation", "email", "appointment-monitor"],
   "author": "Alexandra Zhiznyakova",
   "license": "MIT",
-  "description": "A Playwright-based appointment availability monitor with Telegram notifications.",
+  "description": "A multi-user ICBC appointment availability monitor with email notifications.",
+  "engines": {
+    "node": ">=22.5.0"
+  },
   "dependencies": {
     "dotenv": "^17.4.2",
-    "node-telegram-bot-api": "^0.67.0",
     "playwright": "^1.59.1"
   }
 }
